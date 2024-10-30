@@ -41,3 +41,13 @@ The script will output the fittest path found by the Genetic Algorithm, along wi
 
 1. A plot of the TSP path, showing the nodes (cities), the edges (paths between cities), and the total cost.
 2. A plot of the genetic diversity over the generations.
+
+### Shortest Route Found
+This plot shows the shortest route identified by the algorithm after execution.
+
+![Shortest Route Found](example_plot.png)
+
+### Genetic Diversity Over Generations
+This plot illustrates the genetic diversity of the population across generations.
+
+![Genetic Diversity Over Generations](example_genetic_diversity_over_generations.png)
