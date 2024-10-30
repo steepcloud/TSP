@@ -95,10 +95,10 @@ class GeneticAlgorithmTSP:
         print('Optimizing TSP Route for Graph:')
 
         for generation in range(1, self.generations + 1):
-            print('\nGeneration: {0}'.format(generation))
+            #print('\nGeneration: {0}'.format(generation))
             # this print is wrong because it just gets them ordered, now how they are originally ordered in population
             #print('Population: {0}'.format([self.city_mapping.get(city_map_key, city_map_key) for city_map_key in self.city_map.keys()]))
-            print('Population: {0}'.format([self.city_mapping.get(char, char) for char in population]))
+            #print('Population: {0}'.format([self.city_mapping.get(char, char) for char in population]))
 
             new_population = self.create_next_generation(graph, population, number_of_fits_to_carryover)
             population = new_population
@@ -109,11 +109,11 @@ class GeneticAlgorithmTSP:
                 OrderedDict(self.city_map).values()) else char for char in fittest_route]
             #fittest_route = [self.city_mapping.get(char, char) for char in fittest_route]
 
-            print('Fittest Route: {0}\nFitness(minimum cost): {1}'.format(fittest_route, fittest_fitness))
+            #print('Fittest Route: {0}\nFitness(minimum cost): {1}'.format(fittest_route, fittest_fitness))
 
             genetic_diversity = self.calculate_genetic_diversity(population)
             self.genetic_diversity_values.append(round(genetic_diversity, 4))
-            print('Genetic Diversity: {:.4f}'.format(genetic_diversity))
+            #print('Genetic Diversity: {:.4f}'.format(genetic_diversity))
 
             if self.converged(population):
                 print("Converged", population)
